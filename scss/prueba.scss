@@ -1,0 +1,168 @@
+@import "colores.scss";
+@import "tamanos.scss";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*USO DEL EXTEND*/
+.textoh2{
+    text-align: center;
+    color: $colorLetra4;
+    font-size: $tamano3;
+    font-style: normal;
+    font-weight:bold;
+}
+
+.quienes {
+    @extend .textoh2;
+}
+
+.noticias {
+    @extend .textoh2;
+}
+
+.novedades {
+    @extend .textoh2;
+}
+
+
+/*HEADER*/
+header{
+    height: $altoDiv;
+    background-image: url(../img/guayacanDibujo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+    div{
+        #titulo1{
+        text-align: center;
+        color: $colorLetra1;
+        font-size: $tamano1;
+        font-style: normal;
+        font-weight:bold ;
+        font-family:'Indie Flower', cursive;
+    }
+
+        #titulo2{
+        text-align: center;
+        color:$colorLetra2;
+        font-size: $tamano2;
+        font-style: normal;
+        font-weight:bold ;
+        font-family:'Indie Flower', cursive;
+    }
+}}
+
+
+nav{
+    background-color:$fondoColor2 ;
+    &:hover{
+        background-color:$colorLetra2;
+    }
+}
+
+/*MAIN*/
+main{
+    background-color: $fondoColor2;
+    width: 100%;
+    height: 1300px;
+
+
+    .container{
+        border: 2px solid rgb(173, 53, 32);
+        margin: 5px;
+        padding: 5px;
+        &:hover{
+            border:5px solid rgb(100, 33, 21) ;
+        }
+        }
+    
+    div #hijo1home{
+        padding: 10px;
+       
+        p{
+            color: rgb(105, 17, 11);
+            font-style: normal;
+            font-weight:normal;
+            font-size: 1,5vw;
+            font-family:'Architects Daughter', cursive;
+
+        }}
+
+    div #hijo8home{
+        
+        img{
+        width: 100%;
+        height:350px ;
+        display: block;
+        margin: auto;
+        padding: 10px;
+        margin: 10px;
+        }    
+    }}
+/*FOOTER*/
+
+/*USO DEL MIXIM*/
+
+@mixin containerFooter ($ancho, $alto, $fondo) {
+    width: $ancho;
+    height: $alto;
+    background-color: $fondo;
+} 
+
+.padreFooter{
+    @include containerFooter (100%,300px,rgb(141, 128, 11));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#hijoFooter1{
+    @include containerFooter(30vw, 250px, none );
+    @extend .textoh2;
+    color: $fondoColor2;
+    text-align: center;
+
+}
+
+#hijoFooter2{
+    @include containerFooter(30vw, 250px, none);
+    text-align: center;
+}
+
+#hijoFooter3{
+    @include containerFooter(30vw, 250px, none);
+    img{
+        width: 100%;
+        height:100% ;
+        display: block;
+        margin: auto;
+        }}
+
+   
+    @media only screen and (max-width:576px){
+    main{
+        height: 2700px;
+    }
+
+    footer{
+        background-color: rgb(141, 128, 11);
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    
+        #hijoFooter3 img{
+         width: 70%;
+         height: 70%;
+         }}
+}

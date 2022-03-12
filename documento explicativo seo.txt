@@ -1,0 +1,7 @@
+En el archivo index.html sumé el SEO con las siguientes características:
+
+Descripción: mediante la etiqueta meta name description, agregué el siguiente párrafo que explica en pocas palabras el contenido de mi sitio: “Esta pagina web esta basada en el emprendimiento de tejidos artesanales de mi madre".
+
+Palabras clave: mediante la etiqueta meta name keywords, agregué las palabras clave que acompañarán a todas las páginas de mi sitio: "tejidos, artesanal, autocotono, bolsos, sombreros, bordados, mate"
+
+Encabezado: para el encabezado del h1 utilicé el texto “Guayacan tejidos"
